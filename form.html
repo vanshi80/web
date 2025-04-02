@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#"> 
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"/><br/><br/>
+        
+        <label for="comment">Comments:</label>
+        <textarea name="comment" id="comment"></textarea>
+	<br/><br/>
+        
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email"/>
+        <br/><br/>
+        <label for="things">Things you liked:</label>
+        <input type="checkbox" name="things" value="Site design" id="site-design"/>
+        <label for="site-design">Site design</label>
+        
+        <input type="checkbox" name="things" value="Links" id="links"/>
+        <label for="links">Links</label>
+        
+        <input type="checkbox" name="things" value="Ease of Use" id="ease-of-use"/>
+        <label for="ease-of-use">Ease of Use</label>
+        
+        <input type="checkbox" name="things" value="Images" id="images"/>
+        <label for="images">Images</label>
+        
+        <input type="checkbox" name="things" value="Source Code" id="source-code"/>
+        <label for="source-code">Source Code</label>
+       <br/><br/> 
+        <label for="know">How did you get to our site?</label>
+        <input type="radio" name="source" value="Search Engine" id="search-engine"/>
+        <label for="search-engine">Search Engine</label>
+        
+        <input type="radio" name="source" value="Links from another site" id="links-another-site"/>
+        <label for="links-another-site">Links from another site</label>
+        
+        <input type="radio" name="source" value="Reference in a book" id="reference-book"/>
+        <label for="reference-book">Reference in a book</label>
+        
+        <input type="radio" name="source" value="Other" id="other"/>
+        <label for="other">Other</label>
+        <br/><br/>
+        <label for="options">Rate our site:</label>
+        <select name="options" id="options">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+        </select>
+        <br/><br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
