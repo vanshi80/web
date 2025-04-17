@@ -12,6 +12,10 @@
     <button onclick="factorial()">Find factorial</button>
     <br/><br/>
     <button onclick="deletef()">Delete something</button>
+    <br/><br/>
+    <input type="text" id="texta" onfocus="display()" onblur="hideimage()" placeholder="Focus on me!">
+    <img src="kanha.jpg" alt="" style="display: none; height: 300px; width: 300px;" id="image">
+
     <script>
         function randomno(){
             // random no is generated between 0 and 1 and mulitply by 10 results into no between 0 to 10 in floating point no
@@ -38,8 +42,13 @@
             document.getElementById("p2").innerHTML = fact;
 
         }
+        function display(){
+            document.getElementById("image").style.display = "block";
+        }
+        function hideimage(){
+            document.getElementById("image").style.display = "none";
+        }
         document.getElementById("p1").innerHTML = randomno();
-
     </script>
 </body>
 </html>
