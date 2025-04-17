@@ -14,7 +14,8 @@
     <button onclick="deletef()">Delete something</button>
     <script>
         function randomno(){
-            var x = Math.random()*10;
+            // random no is generated between 0 and 1 and mulitply by 10 results into no between 0 to 10 in floating point no
+            var x = Math.random()*10 +1;
             x = Math.round(x);
             console.log(x);
             return x;
