@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding form validation</title>
+</head>
+<body>
+    <form name="myform" action="" method="post" onsubmit="return validateForm()" >
+        Name:&nbsp;&nbsp;<input name = "name" type="text" placeholder="Enter you name"><br/><br/>
+        Age:&nbsp;&nbsp;<input name = "age" type="number" placeholder="Age"><br/><br/>
+        Password:&nbsp;&nbsp;<input name="pass" type="password" placeholder="Enter password"><br/><br/>
+        <input type="submit" placeholder="Submit">
+        <br/>
+    </form>
+    <script>
+        function validateForm(){
+            // var name = document.myform.name.value;
+            var name = document.getElementsByName("name");
+            var pass = document.myform.pass.value;
+            var age = document.myform.age.value;
+            // we could have just used name if used other way of selecting the name but throught getelementsbyname we get a collection
+            if(name[0].value == ""){
+                alert("Name can not be empty!");
+                return false;
+            }
+            else if(age <18 || age > 25){
+                alert("Age must be between 18 and 25");
+                return false;
+            }
+            else if(pass.length<6){
+                alert("Password should be of minimum 6 characters");
+                return false;
+            }
+            else{
+                alert("Form submitted successfully!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

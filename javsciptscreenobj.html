@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about screen</title>
+</head>
+<body style="background-color: blue;">
+    
+    <script>
+        // Avail height return the actual height of the screen excluding the horizontal taskbar if any
+        // Avail width returns the actual width of the screen excluding the vertical taskbar if any
+        document.write("Screen width :" + screen.width + "<br\>");
+        document.write("Screen height :" + screen.height + "<br\>");
+        document.write("Screen avail height :" + screen.availHeight + "<br\>");
+        document.write("Screen avail width :" + screen.availWidth + "<br\>");
+        document.write("Screen color :" + screen.colorDepth + "<br\>"); //no of bits to represent the color of a single pixel on screen
+        document.write("Screen pixel :" + screen.pixelDepth + "<br\>"); //no of bits to represent each pixel on screen
+    </script>
+</body>
+</html>

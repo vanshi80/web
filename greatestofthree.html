@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of three elements</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        var para = document.getElementsByTagName("p");
+        var v1 = prompt("Enter the first number");
+        var v2 = prompt("Enter the second number");
+        var v3 = prompt("Enter the third number");
+        v1 = parseInt(v1);
+        v2 = parseInt(v2);
+        v3 = parseInt(v3);
+
+        if(v1>v2){
+            if(v1>v3){
+                alert(v1 + " is greatest");
+                para[0].innerHTML = v1 + " IS GREATEST";
+            }else{
+                alert(v3 + " is greatest");
+                para[0].innerHTML = v3 + " IS GREATEST";
+            }
+        }else{
+            if(v2>v3){
+                alert(v2 + " is greatest");
+                para[0].innerHTML = v2 + " IS GREATEST";
+            }else{
+                alert(v3 + " is greatest");
+                para[0].innerHTML = v3 + " IS GREATEST";
+            }
+        }
+    </script>
+</body>
+</html>
