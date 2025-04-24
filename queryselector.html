@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understading query selectork</title>
+</head>
+<body>
+    <p class="main">This is paragraph 1</p>
+    <p id="p1">This is paragraph 2</p>
+    <a href="https://www.google.com/" target="_blank" id="myLink">My Link to google changed to a link to a blog.</a>
+    <script>
+        const para = document.querySelector(".main");
+        // const para2 = document.querySelector("#p1");
+        const paras = document.querySelectorAll("p");
+        paras[0].style.color ="green";
+        const link = document.querySelector("#myLink");
+        link.href = "https://blog.google/intl/en-in/";
+        paras[1].style.backgroundColor = "Red";
+        para.innerHTML = "This is the updated paragraph";
+    </script>
+</body>
+</html>b
