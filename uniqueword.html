@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Find the unique word</title>
+</head>
+<body>
+     <h2>Enter a paragraph</h2>
+     <textarea id="inputtext" placeholder="Begin writing your paragraph.."></textarea>
+     <button onclick="analyzetext()">Analyze</button>
+     <div class="output" id="result"></div>
+
+     <script>
+          function analyzetext(){
+               const text = document.getElementById("inputtext").value;
+               const words = text.tolowerCase().match(/\b[a-z]+\b/g);
+               if(!words || words.length<500){
+                    document.getElementById("result").innerText = "Please enter a paragraph with over 500 words";
+                    return;
+               }
+               // unique words and their frequency
+               const frequency = {};
+               for(let word of words){
+                    if(freq[word]) freq[word]++;
+                    else freq[word] = 1;
+               }
+               // longest unique word
+               const uniqueWords = Object.keys(frequency);
+               let longest = "";
+               for(let word of uniqueWords){
+                    if(word.length > longest.length) longest = word;
+               }
+               // Word with highest frequency
+               let maxWord = "",maxFreq = 0;
+               for(let word in freq){
+                    if(freq[word] > maxFreq){
+                         maxFreq = freq[word];
+                         maxWord = word;
+                    }
+               }
+               
+          }
+     </script>
+</body>
+</html>
